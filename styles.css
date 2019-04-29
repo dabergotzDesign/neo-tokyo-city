@@ -12,7 +12,8 @@ html {
 body {
   font-family: "Inconsolata", monospace;
   color: aliceblue;
-  background-image: url(https://i.ytimg.com/vi/yFroBUvp-Eg/maxresdefault.jpg);
+  background-image: url(image/WallpaperStudio10-68176.jpg);
+  background-size: cover;
   background-color: black;
   background-attachment: fixed;
   background-repeat: repeat;
