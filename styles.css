@@ -15,18 +15,18 @@ body {
   background-image: url(image/WallpaperStudio10-68176.jpg);
   background-size: cover;
   background-attachment: fixed;
-  margin: 0 15%;
+  /* margin: 0 15%; */
 }
 
 section {
   background-color: black;
-  margin: 0px;
+  margin: 0 15%;
   padding: 8px 16px;
 }
 
 header {
   background-image: url(https://ak7.picdn.net/shutterstock/videos/28181107/thumb/1.jpg);
-  margin: 0px;
+  margin: 0 15%;
   padding: 0px;
 }
 
@@ -135,7 +135,7 @@ iframe {
   border: 4px solid white;
   border-radius: 10px;
   padding: 4px;
-  margin: 8px;
+  margin: 0 15%;
   animation: myanimation 5s infinite;
 }
 
@@ -184,8 +184,8 @@ iframe {
 .Nav {
   position: fixed;
   display: inline-block;
-  margin-left: -100px;
-  margin-top: 20px;
+  margin-left: 55px;
+  margin-top: 0px;
 }
 .sidenav {
   width: 140px; /* Set the width of the sidebar */
