@@ -14,13 +14,8 @@ body {
   color: aliceblue;
   background-image: url(image/WallpaperStudio10-68176.jpg);
   background-size: cover;
-  background-color: black;
   background-attachment: fixed;
-  background-repeat: repeat;
-  margin-left: 15%;
-  margin-right: 5%;
-  margin-bottom: 0px;
-  margin-top: 0px;
+  margin: 0 15%;
 }
 
 section {
