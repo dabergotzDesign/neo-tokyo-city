@@ -1,0 +1,315 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  font-variant: small-caps;
+}
+
+/* style the body */
+body {
+  font-family: "Inconsolata", monospace;
+  color: aliceblue;
+  background-image: url(https://i.ytimg.com/vi/yFroBUvp-Eg/maxresdefault.jpg);
+  background-color: black;
+  background-attachment: fixed;
+  background-repeat: repeat;
+  margin-left: 15%;
+  margin-right: 5%;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+section {
+  background-color: black;
+  margin: 0px;
+  padding: 8px 16px;
+}
+
+header {
+  background-image: url(https://ak7.picdn.net/shutterstock/videos/28181107/thumb/1.jpg);
+  margin: 0px;
+  padding: 0px;
+}
+
+/* h1 {
+  color: lightseagreen;
+  font-size: 50px;
+  text-shadow: 2px 2px white;
+  text-align: center;
+  margin: 0px;
+  padding-bottom: 16px;
+} */
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  padding: 8px 8px;
+  font-weight: 200;
+}
+
+/* Header text*/
+#kanjis {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.952);
+  text-shadow: 4px 4px 2px rgb(184, 51, 184);
+  font-size: 75px;
+}
+
+/* Header hover effect, from japanese to english */
+
+#kanjis:hover:before {
+  content: attr(data-hover);
+}
+
+#kanjis:hover:after {
+  transition-duration: 0.8s;
+  text-align: center;
+}
+
+#kanjis:hover:before {
+  content: "NEO-TOKYO";
+  opacity: 0;
+  left: 0;
+  text-align: center;
+  width: 100%;
+}
+
+#kanjis:hover span {
+  opacity: 0;
+}
+
+#kanjis:hover:before {
+  opacity: 1;
+}
+
+hr {
+  margin: 8px;
+  padding: 0px;
+  clear: both;
+}
+
+/* Used for menu inside the header, got replaced by sidebar */
+/* li a {
+  display: inline;
+  padding: 4px 8px;
+  text-decoration: none;
+  color: aquamarine;
+  font-size: 25px;
+}
+
+li {
+  float: left;
+  background-color: black;
+}
+
+ul {
+  list-style-type: none;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0px;
+  margin: 0px;
+} */
+
+footer {
+  color: blueviolet;
+  background-color: black;
+  margin: 0px;
+  padding: 4px 0px;
+  padding-left: 8px;
+}
+
+iframe {
+  margin: auto;
+  display: block;
+}
+
+/* animated Welcome Banner */
+#banner {
+  color: rgba(255, 255, 255, 0.1);
+  text-shadow: 0 0 3px whitesmoke;
+  background-color: black;
+  text-align: center;
+  font-size: 50px;
+  font-family: "Share Tech Mono", monospace;
+  border: 4px solid white;
+  border-radius: 10px;
+  padding: 4px;
+  margin: 8px;
+  animation: myanimation 5s infinite;
+}
+
+/* Banner animation */
+@keyframes myanimation {
+  0% {
+    border-color: magenta;
+    filter: blur(2px);
+    color: rgba(255, 255, 255, 0.5);
+    text-shadow: -1px 0 24px magenta;
+    box-shadow: 0 0 24px magenta, 0 0 24px inset magenta;
+  }
+  25% {
+    border-color: blueviolet;
+    filter: blur (2px);
+    color: rgba(255, 255, 255, 0.5);
+    text-shadow: -1px 0 24px blueviolet;
+    box-shadow: 0 0 24px blueviolet, 0 0 24px inset blueviolet;
+  }
+
+  50% {
+    border-color: blue;
+    filter: blur (2px);
+    color: rgba(255, 255, 255, 0.5);
+    text-shadow: -1px 0 24px blue;
+    box-shadow: 0 0 24px blue, 0 0 24px inset blue;
+  }
+  75% {
+    border-color: cyan;
+    filter: blur (2px);
+    color: rgba(255, 255, 255, 0.5);
+    text-shadow: -1px 0 24px cyan;
+    box-shadow: 0 0 24px cyan, 0 0 24px inset cyan;
+  }
+
+  100% {
+    border-color: aquamarine;
+    filter: blur(2px);
+    color: rgba(255, 255, 255, 0.5);
+    text-shadow: -1px 0 24px aquamarine;
+    box-shadow: 0 0 24px aquamarine, 0 0 24px inset aquamarine;
+  }
+}
+
+/* /////Sidenav///// */
+.Nav {
+  position: fixed;
+  display: inline-block;
+  margin-left: -100px;
+  margin-top: 20px;
+}
+.sidenav {
+  width: 140px; /* Set the width of the sidebar */
+  /*position: fixed;Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /*Stay on top */
+  position: fixed;
+  /* top: 50px;
+  left: 0; */
+  background-color: #111; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 10px;
+  display: none;
+}
+
+.sidenav:hover {
+  display: block;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: aquamarine;
+  display: block;
+}
+
+.sidenav a:last-child {
+  text-align: center;
+  color: blueviolet;
+  padding: 8px;
+  background-color: black;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: blueviolet;
+  transition-duration: 0.8s;
+  /* background-color: black; */
+  box-shadow: inset 0 0 20px rgb(147, 53, 235), 0 0 20px rgb(132, 1, 255);
+  outline-color: blueviolet;
+  outline-offset: 15px;
+}
+
+.sidenav a:active {
+  color: aquamarine;
+  box-shadow: inset 0 0 20px aquamarine, 0 0 20px aquamarine;
+}
+
+/* Drop down menu sidebar */
+.menu {
+  font-size: 2em;
+  z-index: 1;
+  top: 0;
+  background-color: #111;
+  padding: 4px 6px;
+  border: 4px solid whitesmoke;
+}
+
+.menu:hover + nav {
+  display: block;
+}
+
+/* Blog Images */
+
+#cityImg,
+#peopleImg,
+#techImg {
+  max-height: 50%;
+  max-width: 50%;
+  display: block;
+  margin: auto;
+  box-shadow: 1px 2px 5px whitesmoke;
+}
+
+/* Gallery */
+#tokyoH2 {
+  color: rgb(221, 221, 221);
+  text-shadow: 2px 2px 2px darkmagenta;
+  font-weight: bold;
+  font-family: "Share Tech Mono", sans-serif;
+}
+
+.galleryIMG {
+  float: left;
+  height: 250px;
+  width: 250px;
+  border: 2px solid whitesmoke;
+  margin: 8px;
+  margin-left: 50px;
+  margin-bottom: 12px;
+  box-shadow: 3px 3px 5px magenta;
+}
+
+.galleryIMG:hover {
+  box-shadow: 3px 3px 5px rgb(245, 245, 97);
+}
+
+/* Video */
+#video {
+  clear: both;
+}
+
+/* Blog text box */
+#blogText {
+  margin: 0px;
+  padding: 8px;
+}
+
+.backtop {
+  font-size: 4em;
+  float: right;
+  z-index: 1;
+  position: fixed;
+}
+
+/*///// Effects on hover, selection, active///// */
+
+/* select and marked elements have a different effect */
+::selection {
+  color: cyan;
+  background-color: rgb(141, 141, 141);
+}
